@@ -1,0 +1,435 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #050507;
+  font-size: 1rem;
+  /*font-family: ;*/
+}
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #050507;
+  text-decoration: none;
+}
+
+h2 {
+  margin-bottom: 50px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+#mainvisual img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* --#header----------------------- */
+#header {
+  position: relative;
+  background-image: url(../img/sample_ume_flower_festival_mainvisual_iStock_1480059776.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 100px;
+}
+
+header h1 {
+  writing-mode: vertical-rl;
+  /* 縦書きの指定（各ブラウザに対応するためのベンダープレフィックスを設定） */
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;  /* Chrome、Safari用 */
+  -moz-writing-mode: vertical-rl;     /* Firefox用 */
+  -ms-writing-mode: tb-rl;            /* IE用 */
+}
+
+#header .site_title {
+  font-size: 3.5rem;
+  width: 150px;
+  letter-spacing: 0.1em;
+  position: absolute;
+  top: 40px;
+  right: 50px;
+}
+
+#header .site_title span:nth-child(1) {
+  font-size: 2rem;
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
+
+#header .site_title span:nth-child(2) {
+  font-size: 2rem;
+  margin-top: 30px;
+}
+
+.hamburger {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgb(104, 87, 72);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 150;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger span {
+  width: 40px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: rgb(104, 87, 72);
+  /* transition: 0.3 ease-in-out; */
+}
+
+.hamburger span:nth-child(1) {
+  position: absolute;
+  bottom: 50px;
+  right: 15px;
+}
+
+.hamburger span:nth-child(2) {
+  position: absolute;
+  bottom: 33px;
+  right: 15px;
+}
+
+.hamburger span:nth-child(3) {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+/* .active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg);
+  bottom: 30px;
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg);
+  bottom: 30px;
+}
+
+#navi {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/sample_ume_flower_festival_navi_active.jpg);
+  text-align: center;
+  padding-top: 100px;
+  line-height: 3;
+  font-size: 1.5rem;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#navi.active .navi_menu li a {
+  z-index: 160;
+  color: rgb(104, 87, 72);
+  font-weight: bold;
+  padding: 10px;
+}
+
+#navi.active .navi_menu li a:hover {
+  color: rgb(104, 87, 72, 0.7);
+  /* color: rgb(255, 192, 203); */
+
+}
+
+#navi.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ume_petal {
+  pointer-events: none;
+  position: relative;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ume_petal.active {
+  opacity: 0.7;
+  visibility: visible;
+}
+
+.ume_petal li {
+  width: 30px;
+	position: absolute;
+  top: -50px;
+	animation: fall 4s linear infinite, rotate1 2s ease-in-out infinite alternate;
+}
+
+@keyframes fall {
+	to {
+		top: 120%;
+	}
+}
+@keyframes rotate1 {
+	from {
+		transform: translateX(0px) rotate(0deg);
+	}
+	to {
+		transform: translateX(200px) rotate(-80deg) rotateX(180deg);
+	}
+}
+@keyframes rotate2 {
+	from {
+		transform: translateX(200px) rotate(-45deg);
+	}
+	to {
+		transform: translateX(0px) rotate(0deg);
+	}
+}
+.ume_petal li:nth-child(1) {
+	left: 0;
+	animation: fall 10s linear infinite, rotate1 3s ease-in-out infinite alternate;
+}
+.ume_petal li:nth-child(2) {
+	left: 5vw;
+	animation: fall 15s linear infinite, rotate1 2s ease-in-out infinite alternate;
+}
+.ume_petal li:nth-child(3) {
+	left: 15vw;
+	animation: fall 9s linear infinite, rotate1 3.5s ease-in-out infinite alternate;
+}
+.ume_petal li:nth-child(4) {
+	left: 30vw;
+	animation: fall 8s linear infinite, rotate2 4s ease-in-out infinite alternate;
+}
+.ume_petal li:nth-child(5) {
+	left: 40vw;
+	animation: fall 10s linear infinite, rotate1 4s ease-in-out infinite alternate;
+}
+.ume_petal li:nth-child(6) {
+	left: 55vw;
+	animation: fall 11s linear infinite, rotate2 3s ease-in-out infinite alternate;
+}
+.ume_petal li:nth-child(7) {
+	left: 65vw;
+	animation: fall 7s linear infinite, rotate2 3.5s ease-in-out infinite alternate;
+}
+.ume_petal li:nth-child(8) {
+	left: 50vw;
+	animation: fall 7s linear infinite, rotate1 3s ease-in-out infinite alternate;
+}
+
+/* --.container----------------------- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --.container内のレイアウト------------ */
+.content_group {
+  margin-bottom: 100px;
+}
+
+/* --#photo_collection------------------- */
+#photo_collection {
+  width: 100%;
+  padding: 0 0 50px 0;
+}
+
+#photo_collection h2 {
+  text-align: center;
+}
+
+#photo_collection .slick-area {
+  font-size: 0;
+}
+
+#photo_collection .slick-area li {
+  padding: 0 20px;
+}
+
+/* --#event_info----------------------- */
+#event_info {
+  text-align: center;
+}
+
+/* --#event----------------------- */
+#event {
+  text-align: center;
+}
+
+#event p {
+  margin-bottom: 10px;
+}
+
+#event img {
+  width: 800px;
+}
+
+/* --#teahouse----------------------- */
+
+
+.drink {
+  margin-bottom: 150px;
+}
+
+.sweets {
+  margin-bottom: 100px;
+}
+
+#teahouse h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+#teahouse h3 {
+  writing-mode: vertical-rl;
+  /* 縦書きの指定（各ブラウザに対応するためのベンダープレフィックスを設定） */
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;  /* Chrome、Safari用 */
+  -moz-writing-mode: vertical-rl;     /* Firefox用 */
+  -ms-writing-mode: tb-rl;            /* IE用 */
+  color: rgb(104, 87, 72);
+  letter-spacing: 0.3em;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+#teahouse img {
+  opacity: 0.3;
+  width: 800px;
+  border-radius: 5px;
+}
+
+.drink_img,
+.sweets_img {
+  width: 1000px;
+  position: relative;
+}
+
+.drink_menu,
+.sweets_menu {
+  position: relative;
+  left: -300px;
+  bottom: -50px;
+}
+
+#teahouse dl {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  position: absolute;
+  bottom: 10px;
+  background-color: rgb(255, 228, 228);
+  border-radius: 5px;
+}
+
+#teahouse dt {
+  width: 70%;
+  padding: 10px 0 10px 10px;
+
+}
+
+#teahouse dt span {
+  font-size: 0.7rem;
+}
+
+#teahouse dd {
+  width: 30%;
+  text-align: right;
+  padding: 10px 10px 10px 0;
+}
+
+.message_from_teahouse {
+  text-align: center;
+}
+
+/* --#footer----------------------- */
+#footer {
+  color: rgb(104, 87, 72);
+  font-weight: 500;
+  background-color: rgb(234, 211, 124, 0.3);
+  padding: 20px 0 50px 0;
+  text-align: center
+}
+
+#to_top {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgb(104, 87, 72);
+  display: inline-block;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+#to_top::before {
+  content: '';
+  background-color: rgb(104, 87, 72);
+  border-radius: 5px;
+  content: '';
+  display: inline-block;
+  height: 3px;
+  width: 30px;
+  transform: rotate(-45deg);
+  position: relative;
+  left: 5px;
+  bottom: -20px;
+}
+
+#to_top::after {
+  content: '';
+  background-color: rgb(104, 87, 72);
+  border-radius: 5px;
+  content: '';
+  display: inline-block;
+  height: 3px;
+  width: 30px;
+  transform: rotate(45deg);
+  position: relative;
+  left: -5px;
+  bottom: -20px;
+}
+
+/* --#ma_ru_garden_info--------------- */
+#ma_ru_garden_info {
+  display: inline-block;
+  margin: 0 auto 40px auto;
+  line-height: 2;
+  text-align: left;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.smart_phone_layout_copyright {
+  display: none;
+}
