@@ -653,4 +653,8 @@ header h1 {
   .pc {
     display: none;
   }
+
+  #to_top {
+    display: none;
+  }
 }
