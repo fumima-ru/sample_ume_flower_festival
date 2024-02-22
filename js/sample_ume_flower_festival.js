@@ -40,7 +40,7 @@ $(function() {
     slidesToShow: 3,
     responsive: [
       {
-        breakpoint: 1000,
+        breakpoint: 900,
         settings: {
           centerPadding: '40px',
           slidesToShow: 1
