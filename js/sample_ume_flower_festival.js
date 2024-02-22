@@ -52,12 +52,17 @@ $(function() {
 
 // トップに戻るボタンの表示と非表示
 let goToTop = $('#to_top');
-goToTop.hide();
+if ($(window).width() <= 450) {
+    goToTop.hide();
+}
 
 $(window).scroll(function() {
-  if ($(this).scrollTop() > 400)  {
-    goToTop.fadeIn(1000);
-  } else {
-    goToTop.fadeOut(1000);
+  if ($(window).width() > 450) {
+    // 画面幅が450pxより大きい場合の処理
+    if ($(this).scrollTop() > 400)  {
+      goToTop.fadeIn(1000);
+    } else {
+      goToTop.fadeOut(1000);
+    }
   }
 });
