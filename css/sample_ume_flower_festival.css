@@ -274,7 +274,7 @@ header h1 {
 
 #photo_collection img {
   width: 100%;
-  height: 40vw;
+  height: 20vw;
   object-fit: cover;
 }
 
@@ -460,9 +460,6 @@ header h1 {
     background-color: rgb(255, 255, 255, 0.5);
     bottom: 60px;
     left: 397px;
-  }
-
-  #teahouse dl {
     width: 300px;
     font-size: 0.75rem;
     padding: 10px;
@@ -470,15 +467,15 @@ header h1 {
 }
 
 @media screen and (max-width: 900px) {
+  #photo_collection img {
+    width: 700px;
+    height: 400px;
+    object-fit: cover;
+  }
+
   #teahouse img {
     width: 400px;
     height: 300px;
-  }
-
-  #teahouse dl {
-    background-color: transparent;
-    bottom: 50px;
-    left: 400px;
   }
 
   .drink,
@@ -491,15 +488,13 @@ header h1 {
     left: -550px;
     bottom: -300px;
   }
-  
-  #teahouse dl {  
-    display: flex;
-    flex-wrap: wrap;
-    width: 300px;
+
+  #teahouse dl {
+    background-color: transparent;
+    bottom: 50px;
+    left: 400px;
     position: absolute;
-    bottom: 0;
-    border-radius: 5px;
-    padding: 20px;
+    top: -300px;
   }
 
   #teahouse dt,
@@ -560,6 +555,10 @@ header h1 {
   h2 {
     font-size: 1rem;
     margin-bottom: 30px;
+  }
+
+  p {
+    text-align: left;
   }
 
   #header {
@@ -632,9 +631,16 @@ header h1 {
     padding: 0 7px;
   }
 
+  #photo_collection img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+
   .message_from_teahouse {
-    font-size: 0.75rem;
-    margin-top: 320px;
+    font-size: 0.8rem;
+    margin-top: 300px;
+    text-align: left;
   }
 
   #ma_ru_garden_info {
