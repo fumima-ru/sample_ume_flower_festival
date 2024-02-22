@@ -7,8 +7,8 @@ html {
 body {
   color: #050507;
   font-size: 1rem;
-  /*font-family: ;*/
 }
+
 img {
   max-width: 100%;
 }
@@ -24,6 +24,7 @@ a {
 
 h2 {
   margin-bottom: 50px;
+  color: rgb(104, 87, 72);
 }
 
 .flex {
@@ -68,7 +69,7 @@ header h1 {
 
 #header .site_title span:nth-child(1) {
   font-size: 2rem;
-  opacity: 0.7;
+  color: rgb(104, 87, 72);
   margin-bottom: 30px;
 }
 
@@ -155,8 +156,6 @@ header h1 {
 
 #navi.active .navi_menu li a:hover {
   color: rgb(104, 87, 72, 0.7);
-  /* color: rgb(255, 192, 203); */
-
 }
 
 #navi.active {
@@ -252,7 +251,7 @@ header h1 {
 
 /* --.container内のレイアウト------------ */
 .content_group {
-  margin-bottom: 100px;
+  margin: 0 10px 100px 10px;
 }
 
 /* --#photo_collection------------------- */
@@ -273,6 +272,12 @@ header h1 {
   padding: 0 20px;
 }
 
+#photo_collection img {
+  width: 100%;
+  height: 40vw;
+  object-fit: cover;
+}
+
 /* --#event_info----------------------- */
 #event_info {
   text-align: center;
@@ -284,7 +289,7 @@ header h1 {
 }
 
 #event p {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #event img {
@@ -292,8 +297,6 @@ header h1 {
 }
 
 /* --#teahouse----------------------- */
-
-
 .drink {
   margin-bottom: 150px;
 }
@@ -304,7 +307,6 @@ header h1 {
 
 #teahouse h2 {
   text-align: center;
-  font-size: 2rem;
 }
 
 #teahouse h3 {
@@ -325,11 +327,11 @@ header h1 {
   opacity: 0.3;
   width: 800px;
   border-radius: 5px;
+  position: relative;
 }
 
 .drink_img,
 .sweets_img {
-  width: 1000px;
   position: relative;
 }
 
@@ -348,6 +350,7 @@ header h1 {
   bottom: 10px;
   background-color: rgb(255, 228, 228);
   border-radius: 5px;
+  padding: 20px;
 }
 
 #teahouse dt {
@@ -375,7 +378,7 @@ header h1 {
   color: rgb(104, 87, 72);
   font-weight: 500;
   background-color: rgb(234, 211, 124, 0.3);
-  padding: 20px 0 50px 0;
+  padding: 40px 0 50px 0;
   text-align: center
 }
 
@@ -421,7 +424,7 @@ header h1 {
 /* --#ma_ru_garden_info--------------- */
 #ma_ru_garden_info {
   display: inline-block;
-  margin: 0 auto 40px auto;
+  margin: 0 10px 40px 10px;
   line-height: 2;
   text-align: left;
 }
@@ -432,4 +435,222 @@ header h1 {
 
 .smart_phone_layout_copyright {
   display: none;
+}
+
+/* PCレイアウト時の表示・非表示要素 */
+.smartphone {
+  display: none;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 1660px) {
+  #header {
+    background-image: url(../img/sample_ume_flower_festival_mainvisual_medium_iStock_1480059776.jpg);
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .remove_flex {
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  #teahouse dl {
+    background-color: rgb(255, 255, 255, 0.5);
+    bottom: 60px;
+    left: 397px;
+  }
+
+  #teahouse dl {
+    width: 300px;
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #teahouse img {
+    width: 400px;
+    height: 300px;
+  }
+
+  #teahouse dl {
+    background-color: transparent;
+    bottom: 50px;
+    left: 400px;
+  }
+
+  .drink,
+  .sweets {
+    margin-bottom: 300px;
+  }
+
+  .drink_menu,
+  .sweets_menu {
+    left: -550px;
+    bottom: -300px;
+  }
+  
+  #teahouse dl {  
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  #teahouse dt,
+  #teahouse dd {
+    border-bottom: 1px dotted;
+  }
+
+  #teahouse dt:last-of-type,
+  #teahouse dd:last-of-type {
+    border-bottom: none;
+  }
+
+  .content_group:last-of-type {
+    margin-bottom: 50px;
+  }
+
+  #to_top {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgb(104, 87, 72);
+    display: inline-block;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+  }
+  
+  #to_top::before {
+    content: '';
+    background-color: rgb(104, 87, 72);
+    border-radius: 5px;
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 15px;
+    transform: rotate(-45deg);
+    position: relative;
+    left: 3px;
+    bottom: -5px;
+  }
+  
+  #to_top::after {
+    content: '';
+    background-color: rgb(104, 87, 72);
+    border-radius: 5px;
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 15px;
+    transform: rotate(45deg);
+    position: relative;
+    left: -2px;
+    bottom: -5px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  #header {
+    background-image: url(../img/sample_ume_flower_festival_mainvisual_small_iStock_1480059776.jpg);
+  }
+
+  #header .site_title {
+    font-size: 2.5rem;
+    right: 20px;
+  }
+
+  .hamburger {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 150;
+  }
+
+  .hamburger span {
+    width: 20px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: rgb(104, 87, 72);
+  }
+  
+  .hamburger span:nth-child(1) {
+    position: absolute;
+    bottom: 26px;
+    right: 10px;
+  }
+  
+  .hamburger span:nth-child(2) {
+    position: absolute;
+    bottom: 18px;
+    right: 10px;
+  }
+  
+  .hamburger span:nth-child(3) {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  /* .active */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg);
+    bottom: 18px;
+  }
+  
+  .hamburger.active span:nth-child(2),
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(45deg);
+    bottom: 18px;
+  }
+
+  #navi.active .navi_menu li a {
+    border-bottom: 1px solid rgb(104, 87, 72);
+    box-shadow: 0px 8px 5px -5px rgba(104, 87, 72, 0.5);
+  }
+
+  .content_group {
+    margin: 0 10px 50px 10px;
+  }
+
+  #photo_collection .slick-area li {
+    padding: 0 7px;
+  }
+
+  .message_from_teahouse {
+    font-size: 0.75rem;
+    margin-top: 320px;
+  }
+
+  #ma_ru_garden_info {
+    font-size: 0.75rem;
+  }
+
+  .copyright {
+    font-size: 0.75rem;
+  }
+
+  /* スマホレイアウト時の表示・非表示要素 */
+  .smartphone {
+    display: block;
+  }
+  
+  .pc {
+    display: none;
+  }
 }

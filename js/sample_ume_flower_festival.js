@@ -42,7 +42,7 @@ $(function() {
       {
         breakpoint: 1000,
         settings: {
-          centerPadding: '50px',
+          centerPadding: '40px',
           slidesToShow: 1
         }
       }
@@ -55,9 +55,9 @@ let goToTop = $('#to_top');
 goToTop.hide();
 
 $(window).scroll(function() {
-  if ($(this).scrollTop() > 170) {
-    goToTop.fadeIn();
+  if ($(this).scrollTop() > 400)  {
+    goToTop.fadeIn(1000);
   } else {
-    goToTop.fadeOut();
+    goToTop.fadeOut(1000);
   }
 });

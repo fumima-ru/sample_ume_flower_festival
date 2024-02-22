@@ -16,7 +16,7 @@
     <!-- リセットcss -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
 
-    <!-- slickのCSS slickを入れる場合に記述-->
+    <!-- slick -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 
@@ -25,18 +25,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-    <!--Font Awesome読み込み(最新バージョンに更新すること)-->
-    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <!--css読み込み-->
     <link rel="stylesheet" href="css/sample_ume_flower_festival.css">
     
     <!--Google の CDNを使用-->
-    <!--(CDNを経由する方法であればjQueryをダウンロードする必要がない　バージョンが変わることがあるので注意すること)-->
+    <!--(CDNを経由する方法であればjQueryをダウンロードする必要がない)-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
-    <!--jsファイル読み込み---->  
+    <!--js読み込み---->  
     <script src="js/sample_ume_flower_festival.js" defer></script>
   </head>
 
@@ -77,26 +74,30 @@
     </header>
 
       <!--main----------------------------->
-      <main>
-        <section id="photo_collection">
-          <h2>フォトコレクション</h2>
-          <ul class="slick-area">
-            <li><img src="img/sample_ume_flower_festival_photo_collection_1_pexels-bogey-jones-18651684.jpg" alt="梅の写真1"></li>
-            <li><img src="img/sample_ume_flower_festival_photo_collection_2_pexels-대정-김-11692725.jpg" alt="梅の写真2"></li>
-            <li><img src="img/sample_ume_flower_festival_photo_collection_3_pexels-rui-wang-11437037.jpg" alt="梅の写真3"></li>
-            <li><img src="img/sample_ume_flower_festival_photo_collection_4_pexels-birkant-cakar-15878713.jpg" alt="梅の写真4"></li>
-            <li><img src="img/sample_ume_flower_festival_photo_collection_5_pexels-nguyen-hung-11431370.jpg" alt="梅の写真5"></li>
-            <li><img src="img/sample_ume_flower_festival_photo_collection_6_pexels-대정-김-11713928.jpg" alt="梅の写真6"></li>
-            <li><img src="img/sample_ume_flower_festival_photo_collection_7_pexels-kevin-b-14821605.jpg" alt="梅の写真7"></li>
-            <li><img src="img/sample_ume_flower_festival_photo_collection_8_pexels-gaynor-mullen-12934536.jpg" alt="梅の写真8"></li>
-            <li><img src="img/sample_ume_flower_festival_photo_collection_9_pexels-eline-sun-11930041.jpg" alt="梅の写真9"></li>
-          </ul>
-        </section>
+    <main>
+      <section id="photo_collection">
+        <h2>フォトコレクション</h2>
+        <ul class="slick-area">
+          <li><img src="img/sample_ume_flower_festival_photo_collection_1_pexels-bogey-jones-18651684.jpg" alt="梅の写真1"></li>
+          <li><img src="img/sample_ume_flower_festival_photo_collection_2_pexels-대정-김-11692725.jpg" alt="梅の写真2"></li>
+          <li><img src="img/sample_ume_flower_festival_photo_collection_3_pexels-rui-wang-11437037.jpg" alt="梅の写真3"></li>
+          <li><img src="img/sample_ume_flower_festival_photo_collection_4_pexels-birkant-cakar-15878713.jpg" alt="梅の写真4"></li>
+          <li><img src="img/sample_ume_flower_festival_photo_collection_5_pexels-nguyen-hung-11431370.jpg" alt="梅の写真5"></li>
+          <li><img src="img/sample_ume_flower_festival_photo_collection_6_pexels-대정-김-11713928.jpg" alt="梅の写真6"></li>
+          <li><img src="img/sample_ume_flower_festival_photo_collection_7_pexels-kevin-b-14821605.jpg" alt="梅の写真7"></li>
+          <li><img src="img/sample_ume_flower_festival_photo_collection_8_pexels-gaynor-mullen-12934536.jpg" alt="梅の写真8"></li>
+          <li><img src="img/sample_ume_flower_festival_photo_collection_9_pexels-eline-sun-11930041.jpg" alt="梅の写真9"></li>
+          <li><img src="img/sample_ume_flower_festival_photo_collection_10.JPG" alt="梅の写真10"></li>
+          <li><img src="img/sample_ume_flower_festival_photo_collection_11.JPG" alt="梅の写真11"></li>
+        </ul>
+        
+      </section>
 
       <!--.container----------------------->
       <div class="container">
         <section id="event_info" class="content_group">
-          <h2>開催期間:20XX年2月10日～20XX年3月20日</h2>
+          <h2 class="pc">開催期間:20XX年2月10日～20XX年3月20日</h2>
+          <h2 class="smartphone">開催期間<br>20XX年2月10日～20XX年3月20日</h2>
           <p>
             見頃は2月上旬～3月中旬。約600本の梅を楽しむことができます。※品種によって開花のタイミングは異なります。（60品種）
           </p>
@@ -112,7 +113,7 @@
         <section id="teahouse" class="content_group">
           <h2>〇茶房</h2>
           <div class="drink">
-            <div class="flex">
+            <div class="flex remove_flex">
               <div class="drink_img">
                 <h3><span>お飲み物</span></h3>
                 <img src="img/sample_ume_flower_festival_yellow_img.png" alt="お飲み物のイメージ画像">
@@ -133,7 +134,7 @@
           </div>
 
           <div class="sweets">
-            <div class="flex flex_sweets">
+            <div class="flex remove_flex">
               <div class="sweets_img">
                 <h3><span>甘味</span></h3>
                 <img src="img/sample_ume_flower_festival_brown_img.png" alt="甘味のイメージ画像">
@@ -157,8 +158,8 @@
             御飲食されない方も、ぜひ覗きにいらして下さい。
           </p>
         </section>
-      </main>
-    </div>
+      </div>
+    </main>
 
     <!--#footer-------------------------->
     <footer id="footer">
@@ -172,9 +173,7 @@
         <p>開園時間：9:00～17:00</p>
       </div>
 
-      <p class="copyright">&copy; 2024 fumima_ru | 2024.〇.〇〇_upload<!--  | (last_updated_2024.〇.〇) --></p>
-
-      <p class="smart_phone_layout_copyright">&copy; 2024 fumima_ru<br>2024.1.31_upload<!--  (last_updated_2024.〇.〇) --></p>
+      <p class="copyright">&copy; 2024 fumima_ru | 2024.2.22_upload<!--  | (last_updated_2024.〇.〇) --></p>
     </footer>
   </body>
 </html>
