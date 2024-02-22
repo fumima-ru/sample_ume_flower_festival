@@ -31,23 +31,28 @@ function naviClose() {
 }
 
 // スライダー
-$(function() {
-  $('.slick-area').slick({
-    autoplay: true,
-    arrows: false,
-    centerMode: true,
-    centerPadding: '100px',
-    slidesToShow: 3,
-    responsive: [
-      {
-        breakpoint: 900,
-        settings: {
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-    ]
-  });
+$('.slick-area').slick({
+  autoplay: true,
+  arrows: false,
+  centerMode: true,
+  centerPadding: '100px',
+  slidesToShow: 5,
+  responsive: [
+    {
+      breakpoint: 1400,
+      settings: {
+        centerPadding: '70px',
+        slidesToShow: 3
+      },
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        centerPadding: '50px',
+        slidesToShow: 1
+      },
+    },
+  ],
 });
 
 // トップに戻るボタンの表示と非表示
