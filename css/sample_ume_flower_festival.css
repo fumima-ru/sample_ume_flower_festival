@@ -11,6 +11,7 @@ body {
 
 img {
   max-width: 100%;
+  border-radius: 5px;
 }
 
 li {
@@ -271,10 +272,6 @@ header h1 {
 
 #photo_collection .slick-area li {
   padding: 0 10px;
-}
-
-#photo_collection img {
-  border-radius: 5px;
 }
 
 /* --#event_info----------------------- */
