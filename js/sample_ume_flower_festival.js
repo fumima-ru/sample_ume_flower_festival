@@ -31,28 +31,44 @@ function naviClose() {
 }
 
 // スライダー
-$('.slick-area').slick({
-  autoplay: true,
-  arrows: false,
-  centerMode: true,
-  centerPadding: '100px',
-  slidesToShow: 5,
-  responsive: [
-    {
-      breakpoint: 1400,
-      settings: {
-        centerPadding: '70px',
-        slidesToShow: 3
+$(function() {
+  $('.slick-area').slick({
+    autoplay: true,
+    arrows: false,
+    centerMode: true,
+    centerPadding: '50px',
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1660,
+        settings: {
+          centerPadding: '25px',
+          slidesToShow: 3
+        },
       },
-    },
-    {
-      breakpoint: 800,
-      settings: {
-        centerPadding: '50px',
-        slidesToShow: 1
+      {
+        breakpoint: 1450,
+        settings: {
+          centerPadding: '25px',
+          slidesToShow: 2
+        },
       },
-    },
-  ],
+      {
+        breakpoint: 900,
+        settings: {
+          centerPadding: '25px',
+          slidesToShow: 1
+        },
+      },
+      {
+        breakpoint: 450,
+        settings: {
+          centerPadding: '10%',
+          slidesToShow: 1
+        },
+      },
+    ],
+  });
 });
 
 // トップに戻るボタンの表示と非表示
