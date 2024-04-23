@@ -73,6 +73,8 @@ $(function() {
 
 // トップに戻るボタンの表示と非表示
 let goToTop = $('#to_top');
+goToTop.hide();
+
 if ($(window).width() <= 450) {
     goToTop.hide();
 }
