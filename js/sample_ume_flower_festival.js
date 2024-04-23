@@ -76,7 +76,7 @@ let goToTop = $('#to_top');
 goToTop.hide();
 
 if ($(window).width() <= 450) {
-    goToTop.hide();
+  goToTop.hide();
 }
 
 $(window).scroll(function() {
